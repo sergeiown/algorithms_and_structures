@@ -1,3 +1,5 @@
+/* The array contains eight numbers, and the linearSearch function takes this array and the desired element as parameters. The count variable is initialized to 0 and is used to count the number of iterations required to find the desired element. In the for loop, starting with the first element of the array, each element is compared with the desired one. If the desired element is found, its index is returned as the result of the function. Otherwise, the count counter is incremented by 1, and the search continues. After the linearSearch function is executed, the result (the index of the searched element) is displayed on the screen using console.log, and the number of iterations is displayed using the line containing count. */
+
 const array = [1, 4, 9, 2, 5, 7, 3, 8, 6];
 let count = 0;
 
