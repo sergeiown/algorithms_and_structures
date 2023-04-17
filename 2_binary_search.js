@@ -29,3 +29,23 @@ console.log(binarySearch(array, 0)); // 0
 console.log(`Number of iterations: ${count}`); // Number of iterations: 4
 
 // The complexity of binary search is O(log n)
+
+let countRecursion = 0;
+
+function recursiveBinarySearch(array, item, start, end) {
+    countRecursion += 1;
+    let middle = Math.floor((start + end) / 2);
+    if (array[middle] === item) {
+        return middle;
+    }
+    if (item < array[middle]) {
+        return recursiveBinarySearch(array, item, start, middle - 1);
+    } else {
+        return recursiveBinarySearch(array, item, middle + 1, end);
+    }
+}
+
+console.log(recursiveBinarySearch(array, 0, 0, array.length)); // 0
+console.log(`Number of iterations: ${countRecursion}`); // Number of iterations: 4
+
+// The complexity of recursive binary search is O(log n) - the same as for binary search
