@@ -6,7 +6,6 @@ graph.d = ['f'];
 graph.e = ['f'];
 graph.f = ['g'];
 
-// find the shortest path between two nodes
 function breadthSearch(graph, start, end) {
     let queue = [];
     queue.push(start);
