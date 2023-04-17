@@ -1,8 +1,11 @@
 /* The quickSort function takes an array as a parameter.
 If the array contains one element or less, the function returns this array.
-If the array contains more than one element, the pivot element is selected. In this case, the average value of the array is used as the pivot element, finding the index that divides the length of the array in half.
+If the array contains more than one element, the pivot element is selected. In this case,
+the average value of the array is used as the pivot element, finding the index that divides
+the length of the array in half.
 Two empty subsets are created - smaller than pivot (less) and larger than pivot (greater).
-The array is iterated, and each element is compared to pivot. If the element is smaller than pivot, it is added to the less array, otherwise - to the greater array.
+The array is iterated, and each element is compared to pivot. If the element is smaller
+than pivot, it is added to the less array, otherwise - to the greater array.
 For each of the subsets less and greater, the quickSort function is called recursively.
 The sorted subarrays less, pivot and greater are combined into one sorted array.
 The sorted array is returned as the result of the quickSort function. */

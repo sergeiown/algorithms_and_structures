@@ -1,4 +1,10 @@
-/* The array contains an ordered sequence of numbers. The binarySearch function uses a binary search algorithm to find the item in the array. The binary search algorithm works by dividing the array into halves and checking the part that may contain the desired item. The check is performed by comparing the desired item with the item in the middle of the array. If the searched element is smaller than the element in the middle, the search continues in the first half of the array, otherwise - in the second half of the array. This process is repeated, dividing the array into halves, until the desired element is found or it turns out that it is not in the array. */
+/* The array contains an ordered sequence of numbers. The binarySearch function uses a binary search
+algorithm to find the item in the array. The binary search algorithm works by dividing the array
+into halves and checking the part that may contain the desired item. The check is performed by
+comparing the desired item with the item in the middle of the array. If the searched element is
+smaller than the element in the middle, the search continues in the first half of the array,
+otherwise - in the second half of the array. This process is repeated, dividing the array into
+halves, until the desired element is found or it turns out that it is not in the array. */
 
 const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 let count = 0;

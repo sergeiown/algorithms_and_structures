@@ -1,7 +1,19 @@
-/* The algorithm uses three objects: costs, parents, processed. The costs object contains the distances from each vertex to the starting vertex start. The parents object contains information about the parents of each vertex, i.e. the vertex from which you can get to the given vertex the fastest. The processed object contains a list of already processed vertices.
-First, distances are set for all vertices (except the initial vertex) in Infinity, and the distance for the initial vertex is set to 0. Next, the smallest distance to the neighboring vertices is calculated using the edge weight. If this distance is less than the current distance, the distance for the vertex is updated, and the parent vertex is also updated.
-After that, the vertex is added to the list of processed vertices, and the algorithm continues until all vertices are processed.
-After completing the algorithm, the shortest path from the final vertex to the initial vertex is found using the information from the parent object. The path is stored in the optimalPath array, which is rotated to get the path from start to finish. The result is returned as an object. */
+/* The algorithm uses three objects: costs, parents, processed. The costs object contains
+the distances from each vertex to the starting vertex start. The parents object contains
+information about the parents of each vertex, i.e. the vertex from which you can get to
+the given vertex the fastest. The processed object contains a list of already processed
+vertices.
+First, distances are set for all vertices (except the initial vertex) in Infinity, and
+the distance for the initial vertex is set to 0. Next, the smallest distance to the
+neighboring vertices is calculated using the edge weight. If this distance is less than
+the current distance, the distance for the vertex is updated, and the parent vertex is
+also updated.
+After that, the vertex is added to the list of processed vertices, and the algorithm
+continues until all vertices are processed.
+After completing the algorithm, the shortest path from the final vertex to the initial
+vertex is found using the information from the parent object. The path is stored in the
+optimalPath array, which is rotated to get the path from start to finish. The result is
+returned as an object. */
 
 const graph = {};
 graph.a = { b: 2, c: 1 };

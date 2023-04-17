@@ -1,4 +1,7 @@
-/* This uses a nested loop to compare each pair of adjacent elements in the array. If the previous element is larger than the next, then they are swapped. After each iteration of the outer loop, the largest element is moved to the right edge of the array. This process is repeated until all the elements are sorted. */
+/* This uses a nested loop to compare each pair of adjacent elements in the array.
+If the previous element is larger than the next, then they are swapped. After each
+iteration of the outer loop, the largest element is moved to the right edge of the array.
+This process is repeated until all the elements are sorted. */
 
 const arr = [3, 0, 2, 5, -1, 4, 1, 15, -8, 7, 6, 9, 8, 11, 10, 13, 12, 14];
 let count = 0;
