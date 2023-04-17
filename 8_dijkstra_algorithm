@@ -1,0 +1,67 @@
+const graph = {};
+graph.a = { b: 2, c: 1 };
+graph.b = { f: 5 };
+graph.c = { d: 5, e: 2 };
+graph.d = { f: 1 };
+graph.e = { f: 1 };
+graph.f = { g: 1 };
+graph.g = {};
+
+function shortestPath(graph, start, end) {
+    const costs = {};
+    const parents = {};
+    const processed = [];
+
+    for (let node in graph) {
+        if (node === start) {
+            costs[node] = 0;
+        } else {
+            costs[node] = Infinity;
+        }
+        parents[node] = null;
+    }
+
+    let node = findLowestCostNode(costs, processed);
+    while (node) {
+        const cost = costs[node];
+        const neighbors = graph[node];
+        for (let n in neighbors) {
+            const newCost = cost + neighbors[n];
+            if (costs[n] > newCost) {
+                costs[n] = newCost;
+                parents[n] = node;
+            }
+        }
+        processed.push(node);
+        node = findLowestCostNode(costs, processed);
+    }
+
+    let optimalPath = [end];
+    let parent = parents[end];
+    while (parent) {
+        optimalPath.push(parent);
+        parent = parents[parent];
+    }
+    optimalPath.reverse();
+
+    const results = {
+        distance: costs[end],
+        path: optimalPath,
+    };
+    return results;
+}
+
+function findLowestCostNode(costs, processed) {
+    let lowestCost = Infinity;
+    let lowestCostNode = null;
+    for (let node in costs) {
+        const cost = costs[node];
+        if (cost < lowestCost && !processed.includes(node)) {
+            lowestCost = cost;
+            lowestCostNode = node;
+        }
+    }
+    return lowestCostNode;
+}
+
+console.log(shortestPath(graph, 'a', 'g')); // { distance: 5, path: [ 'a', 'c', 'e', 'f', 'g' ] }
