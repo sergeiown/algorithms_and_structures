@@ -1,4 +1,5 @@
-/* Loop vs Recursion vs Recursion with memoization on factorial of 1000 example */
+/* Loop vs Recursion vs Recursion with memoization on factorial of 1000 example.
+The calculation of the time required to find the 1000! for each of the three methods is also given. */
 
 /* loop */
 let count = 0;
