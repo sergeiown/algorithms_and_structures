@@ -1,4 +1,5 @@
 # algorithms_and_structures
+### study guide
 
 1.  **The linear search algorithm** is to go through the elements of the array starting from the first element and compare each element with the desired element. If an element is found that is equal to the desired one, its index in the array is returned. If the element is not found, null is returned.  
       
